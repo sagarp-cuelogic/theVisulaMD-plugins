@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="utf-8"/>
+  	<title>Masonry Demo</title>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <style type="text/css">
+      /* ---- grid ---- */
+      .grid {
+        background: #EEE;
+        max-width: 1200px;
+      }
+      /* clearfix */
+      .grid:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      /* ---- grid-item ---- */
+      .grid-sizer, .grid-item {
+        width:33.33333333%;
+        float: left;
+        padding:7px;
+      }
+      .grid-item img{
+        max-width:100%;
+      }
+      @media screen and (max-width:640px){
+        .grid-sizer, .grid-item{
+          width:50%;
+        }
+      }
+      @media screen and (max-width:480px){
+        .grid-sizer, .grid-item{
+          width:100%;
+        }
+      }
+      /*.grid-item--width2 { width: 320px; }
+      .grid-item--width3 { width: 480px; }
+      .grid-item--width4 { width: 640px; }
+      .grid-item--height2 { height: 200px; }
+      .grid-item--height3 { height: 260px; }
+      .grid-item--height4 { height: 360px; }*/
+      #masonry-list .grid-item{
+        display:none;
+      }
+      #loadMore {
+          color:green;
+          cursor:pointer;
+      }
+      #loadMore:hover {
+          color:black;
+      }
+      #showLess {
+          color:red;
+          cursor:pointer;
+      }
+      #showLess:hover {
+          color:black;
+      }
+      .box-holder{
+        background:#FFF;
+        padding:8px;
+        border:#ccc 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+  	<div class="container">
+  	  <h2>Responsive Masonry Layout with Auto Load Effect</h2><br><br>
+        <!--  To Direct Intigrate in HTML use below div with data-masonry Attribute  -->
+        <div id="masonry-list" class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer" }'>
+        <!-- <div id="masonry-list" class="grid"> -->
+          <div class="grid-sizer"></div>
+          <div class="grid-item">
+            <div class="box-holder">
+              <img src="images/9.jpg">
+              <h3>Topic Title</h3>
+              <p>Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. piscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect. Lorem ipsum doller sit amit, consectetuer adipiscing elit, sepiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect. Lorem ipsum doller sit amit, consectetuer adipiscing elit.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="box-holder">
+              <video width="100%" controls>
+                <source src="images/HTML5.mp4" type="video/mp4" />
+              </video>
+              <h3>Topic Title</h3>
+              <p>Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="box-holder">
+              <img src="images/2.jpg">
+              <h3>Topic Title</h3>
+              <p>Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect. Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="box-holder">
+              <img src="images/1.jpg">
+              <h3>Topic Title</h3>
+              <p>Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="box-holder">
+              <video width="100%" controls>
+                <source src="images/HTML5.mp4" type="video/mp4" />
+              </video>
+              <h3>Topic Title</h3>
+              <p>Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="box-holder">
+              <img src="images/6.jpg">
+              <h3>Topic Title</h3>
+              <p>Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect. Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="box-holder">
+              <img src="images/5.jpg">
+              <h3>Topic Title</h3>
+              <p>Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="box-holder">
+              <img src="images/7.jpg">
+              <h3>Topic Title</h3>
+              <p>Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="box-holder">
+              <img src="images/9.jpg">
+              <h3>Topic Title</h3>
+              <p>Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect. Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="box-holder">
+              <video width="100%" controls>
+                <source src="images/HTML5.mp4" type="video/mp4" />
+              </video>
+              <h3>Topic Title</h3>
+              <p>Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="box-holder">
+              <img src="images/4.jpg">
+              <h3>Topic Title</h3>
+              <p>Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. piscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect. Lorem ipsum doller sit amit, consectetuer adipiscing elit, sepiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect. Lorem ipsum doller sit amit, consectetuer adipiscing elit.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="box-holder">
+              <video width="100%" controls>
+                <source src="images/HTML5.mp4" type="video/mp4" />
+              </video>
+              <h3>Topic Title</h3>
+              <p>Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="box-holder">
+              <img src="images/2.jpg">
+              <h3>Topic Title</h3>
+              <p>Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect. Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="box-holder">
+              <img src="images/3.jpg">
+              <h3>Topic Title</h3>
+              <p>Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="box-holder">
+              <video width="100%" controls>
+                <source src="images/HTML5.mp4" type="video/mp4" />
+              </video>
+              <h3>Topic Title</h3>
+              <p>Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="box-holder">
+              <img src="images/6.jpg">
+              <h3>Topic Title</h3>
+              <p>Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect. Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="box-holder">
+              <img src="images/5.jpg">
+              <h3>Topic Title</h3>
+              <p>Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="box-holder">
+              <img src="images/7.jpg">
+              <h3>Topic Title</h3>
+              <p>Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="box-holder">
+              <img src="images/9.jpg">
+              <h3>Topic Title</h3>
+              <p>Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect. Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="box-holder">
+              <video width="100%" controls>
+                <source src="images/HTML5.mp4" type="video/mp4" />
+              </video>
+              <h3>Topic Title</h3>
+              <p>Lorem ipsum doller sit amit, consectetuer adipiscing elit, sed diam nonummy nibh. Responsive Masonry Layout with Load more Effect.</p>
+            </div>
+          </div>
+        </div>
+      <div class="clearfix" style="height:500px;">&nbsp;</div>
+  	</div>
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script type="text/javascript">
+        // $('.grid').masonry({
+        //   // options
+        //   itemSelector: '.grid-item',
+        //   columnWidth: 200
+        // });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+          size_li = $("#masonry-list .grid-item").size();
+          x=6;
+          $('#masonry-list .grid-item:lt('+x+')').show();
+
+          $(window).scroll(function() {   
+             if($(window).scrollTop() + $(window).height() > $(document).height() - 200) {
+              x= (x+4 <= size_li) ? x+4 : size_li;
+              $('#masonry-list .grid-item:lt('+x+')').show();
+              $('.grid').masonry();
+             }
+          });
+      });
+    </script>
+  </body>
+</html>

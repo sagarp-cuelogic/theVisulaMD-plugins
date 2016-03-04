@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="utf-8"/>
+  	<title>Masonry Demo</title>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <style type="text/css">
+      /* ---- grid ---- */
+      .grid {
+        background: #EEE;
+        max-width: 1200px;
+      }
+      /* clearfix */
+      .grid:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      /* ---- grid-item ---- */
+      .grid-sizer, .grid-item {
+        width:33%;
+        /*height: 120px;*/
+        float: left;
+        padding:7px;
+        /*background: #D26;
+        border: 2px solid #333;
+        border-color: hsla(0, 0%, 0%, 0.5);
+        border-radius: 5px;*/
+      }
+      .grid-item img{
+        max-width:100%;
+      }
+      @media screen and (max-width:640px){
+        .grid-sizer, .grid-item{
+          width:50%;
+        }
+      }
+      @media screen and (max-width:480px){
+        .grid-sizer, .grid-item{
+          width:100%;
+        }
+      }
+      /*.grid-item--width2 { width: 320px; }
+      .grid-item--width3 { width: 480px; }
+      .grid-item--width4 { width: 640px; }
+      .grid-item--height2 { height: 200px; }
+      .grid-item--height3 { height: 260px; }
+      .grid-item--height4 { height: 360px; }*/
+    </style>
+  </head>
+  <body>
+  	<div class="container">
+      <h2>Responsive Masonry Layout</h2><br><br>
+        <div class="grid">
+          <div class="grid-sizer"></div>
+          <div class="grid-item">
+            <img src="images/1.jpg">
+          </div>
+          <div class="grid-item">
+            <img src="images/2.jpg">
+          </div>
+          <div class="grid-item">
+            <img src="images/3.jpg">
+          </div>
+          <div class="grid-item">
+            <img src="images/4.jpg">
+          </div>
+          <div class="grid-item">
+            <img src="images/5.jpg">
+          </div>
+          <div class="grid-item">
+            <img src="images/6.jpg">
+          </div>
+          <div class="grid-item">
+            <img src="images/7.jpg">
+          </div>
+          <div class="grid-item">
+            <img src="images/8.jpg">
+          </div>
+          <div class="grid-item">
+            <img src="images/9.jpg">
+          </div>
+          <div class="grid-item">
+            <img src="images/10.png">
+          </div>
+          <div class="grid-item">
+            <img src="images/11.png">
+          </div>
+          <div class="grid-item">
+            <img src="images/12.png">
+          </div>
+          <div class="grid-item">
+            <img src="images/13.png">
+          </div>
+          <div class="grid-item">
+            <img src="images/14.png">
+          </div>
+        </div>
+        <!-- <h1>Masonry - Initialize in HTML</h1>
+
+        <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 160 }'>
+          <div class="grid-item"><img src="images/1.jpg"></div>
+          <div class="grid-item grid-item--width2 grid-item--height2"></div>
+          <div class="grid-item grid-item--height3"></div>
+          <div class="grid-item grid-item--height2"></div>
+          <div class="grid-item grid-item--width3"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item grid-item--height2"></div>
+          <div class="grid-item grid-item--width2 grid-item--height3"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item grid-item--height2"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item grid-item--width2 grid-item--height2"></div>
+          <div class="grid-item grid-item--width2"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item grid-item--height2"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item grid-item--height3"></div>
+          <div class="grid-item grid-item--height2"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item grid-item--height2"></div>
+        </div> -->
+  	  <div class="clearfix"></div>
+  	</div>
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script type="text/javascript">
+      $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth:'.grid-sizer'
+      });
+    </script>
+  </body>
+</html>
